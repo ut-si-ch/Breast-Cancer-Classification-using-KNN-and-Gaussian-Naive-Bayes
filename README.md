@@ -28,12 +28,21 @@ The data used in this project is a dataset of breast cancer patients.The dataset
 * **Target**: `diagnosis` — 1 (Malignant), 0 (Benign)
 * **Feature Types**: All continuous — mean, standard error, and worst value for cell nucleus properties like:
 
+     ![image](https://github.com/user-attachments/assets/5864b1fe-4829-4f2b-83e4-fc6487f8c635)
+
   * Radius, Texture, Perimeter, Area, Smoothness, Compactness, etc.
 * **Preprocessing**:
 
   * Dropped irrelevant columns (`id`, `Unnamed: 32`)
   * Mapped labels (M → 1, B → 0)
   * Data visualization using `lmplot` for feature correlation exploration
+ 
+![image](https://github.com/user-attachments/assets/86f241b3-e587-4c07-8dd8-d04f5a932e21)
+![image](https://github.com/user-attachments/assets/b94816a7-827e-4ca9-9377-52a3b26a3e79)
+
+
+
+
 
 ---
 
@@ -61,13 +70,9 @@ The primary evaluation metric used for both models is accuracy. Cross-validation
 
 ### 📌 Conclusion
 
-* **KNN** and **GaussianNB** proved effective for binary classification on medical data,despite their different underlying mechanisms, are capable of achieving strong performance on this dataset for breast cancer classification, particularly in minimizing false positives and achieving a good rate of identifying true malignant cases. You can conclude that both models are good candidates for this task based on these evaluation metrics.
-* **the K-Nearest Neighbors model, particularly when trained on the original, unbalanced dataset, demonstrates strong performance in classifying breast tumors as benign or malignant. Achieving a high accuracy of approximately 97.4%, with perfect precision (1.00) and high recall (0.93) for the malignant class, the model shows a commendable ability to identify malignant cases while minimizing false positives. This makes it a promising tool for aiding in breast cancer diagnosis. In the future, collecting more data, performing feature engineering, hyperparameter tunning, and exploring other models can lead to improvement in models performance.**
+In this project, both **K-Nearest Neighbors (KNN)** and **Gaussian Naive Bayes (GaussianNB)** models demonstrated strong performance in classifying breast tumors as benign or malignant. The KNN model, specifically when trained on the original data, **achieved high accuracy (97.4%) with perfect precision (1.00) and high recall (0.93) for identifying malignant cases, effectively minimizing false positives and negatives in this critical task. Similarly, the GaussianNB model, even with SMOTE balancing, showed comparable high accuracy and excellent performance metrics for malignant tumor identification.** Both models are promising tools for breast cancer diagnosis. Future work could involve exploring other models, further hyperparameter tuning, and potentially acquiring more data to enhance performance.
 
-* **Based on this classification report, the Gaussian Naive Bayes model, even when trained with SMOTE-balanced data, also performs exceptionally well. It achieves the same high accuracy of approximately 97.4% as the best-performing KNN model. Crucially, it also demonstrates perfect precision (1.00) and high recall (0.93) for the malignant class. This means the Gaussian Naive Bayes model, like the best KNN model, is highly effective at identifying malignant tumors while having no false positives for this class.**
-
-
-* This project demonstrates proficiency in model comparison, medical data handling, and visual analysis
+This project demonstrates proficiency in model comparison, medical data handling, and visual analysis
 
 ---
 
